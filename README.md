@@ -1,4 +1,7 @@
 # react-arrows
+
+Experimental Fork
+
 React library for creating SVG arrow between two HTML elements. Positions of elements are observed, so when they change arrow will re-render. Library is react implementation of [arrows-svg](https://www.npmjs.com/package/arrows-svg)
 
 !["Arrow"](docs/arrow-1.png?raw=true "Arrow example")
@@ -25,6 +28,11 @@ Styles should be added to make arrow visible. Feel free to change them.
   stroke: #000;
   fill: transparent;
   stroke-dasharray: 4 2;
+}
+
+.arrow__path.clickable {
+  pointer-events: visible;
+  cursor: pointer;
 }
 
 .arrow__head line {

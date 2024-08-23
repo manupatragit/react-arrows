@@ -1,6 +1,6 @@
 {
-  "name": "react-arrows",
-  "version": "1.2.0",
+  "name": "@commutatus/react-arrows",
+  "version": "1.2.1",
   "description": "React SVG arrow between two HTML elements",
   "keywords": [
     "arrow",
@@ -24,7 +24,7 @@
     "url": "https://github.com/sasza2/react-arrows/issues"
   },
   "dependencies": {
-    "arrows-svg": "^1.4.1"
+    "@commutatus/arrows-svg": "^1.4.1"
   },
   "devDependencies": {
     "@babel/core": "^7.9.0",

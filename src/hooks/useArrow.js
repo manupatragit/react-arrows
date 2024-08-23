@@ -1,19 +1,19 @@
 import { useLayoutEffect, useRef } from 'react'
-import arrowCreate from 'arrows-svg'
+import arrowCreate from '@commutatus/arrows-svg'
 
 import { nodeSafe } from '../helpers/node'
 import useObserver from './useObserver'
 
-const useArrow = ({ className, head, from, to, onChange }) => {
+const useArrow = ({ className, head, from, to, onChange, onClick }) => {
   const mounted = useObserver({ from, to })
   const arrowRef = useRef();
 
   useLayoutEffect(() => {
     if (!arrowRef.current) return
     arrowRef.current.setProps({
-      className, head, from, to, onChange,
+      className, head, from, to, onChange, onClick
     })
-  }, [className, head, from, to, onChange])
+  }, [className, head, from, to, onChange, onClick])
 
   useLayoutEffect(() => {
     if (!mounted) return
@@ -31,6 +31,7 @@ const useArrow = ({ className, head, from, to, onChange }) => {
           node: nodeSafe(to),
         },
         onChange,
+        onClick
       })
     } catch(e){
       console.warn(e);
