@@ -9,10 +9,14 @@ const useArrow = ({ className, head, from, to, onChange, onClick }) => {
   const arrowRef = useRef();
 
   useLayoutEffect(() => {
-    if (!arrowRef.current) return
-    arrowRef.current.setProps({
-      className, head, from, to, onChange, onClick
-    })
+    if (!arrowRef.current?.setProps) return
+    try {
+      arrowRef.current.setProps({
+        className, head, from, to, onChange, onClick
+      })
+    } catch (e) {
+      console.error(e)
+    }
   }, [className, head, from, to, onChange, onClick])
 
   useLayoutEffect(() => {
@@ -33,7 +37,7 @@ const useArrow = ({ className, head, from, to, onChange, onClick }) => {
         onChange,
         onClick
       })
-    } catch(e){
+    } catch (e) {
       console.warn(e);
       return;
     }
