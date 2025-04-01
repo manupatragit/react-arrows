@@ -1,5 +1,5 @@
 {
-  "name": "@commutatus/react-arrows",
+  "name": "manureact-arrows",
   "version": "1.2.2",
   "description": "React SVG arrow between two HTML elements",
   "keywords": [
@@ -16,7 +16,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/sasza2/react-arrows.git"
+    "url": "https://github.com/manupatragit/react-arrows/tree/main"
   },
   "author": "sasza",
   "license": "MIT",
